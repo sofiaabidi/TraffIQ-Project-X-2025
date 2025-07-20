@@ -50,18 +50,3 @@ a) RL: env is unknown at the start. as agent interacts with the env, it improves
 b) Planning: model of env is unknown. agent improves policy by performing computations. 
 exploration-exploitation trailer (classic RL thing). learning the optimal policy, not to get stuck on sub-optimal ones.
 Prediction: evaluate the future, given a policy. Control: optimize the future, finding best policy.
-
-## Lecture-2: Markov Decision Process (MDP)
-
-1. Introduction to MDPs:
-- MDP describes an env for RL. env is fully observable. current state characterizes the process.
-optimal control primarily deal with cont. MDPs.
-pomdp can be converted to MDPs. bandits are MDP with single state (refer K-Arm bandit prob)
-- State transition matrix: defines transition probabilities from **all** states ‘s’ to all successor states s’.
-summation of each row of matrix=1
-- Memoryless property: in p&s context, future beahviour of a RV is independent of past ones.
-- Markov Process: memoryless random process (seq of random states with markov prop)
-(refer the markov chain example in the video, try to find some on your own)
-
-1. Markov Reward Process:
--
