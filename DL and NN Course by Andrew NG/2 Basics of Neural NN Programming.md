@@ -1,4 +1,4 @@
-# 2. Basics of Neural NN Programming:
+# 2. Basics of NN Programming:
 
 - Binary Classification: categorize input data into one of two distinct classes.
 Example: if we want to classify a cat/non-cat, a NN would process image data, output layer produces a probability indicating likelihood of a cat which can be classified by a threshold value.
