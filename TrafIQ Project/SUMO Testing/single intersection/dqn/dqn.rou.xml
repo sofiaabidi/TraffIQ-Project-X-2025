@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!-- Vehicle type -->
+    <vType id="car" accel="2.5" decel="4.5" sigma="0.5"
+           length="5" minGap="2.5" maxSpeed="50" guiShape="passenger"/>
+
+    <!-- Eastbound (Node1_2_EB) -->
+    <flow id="EB" type="car" begin="0" end="3600" probability="0.2" departLane="random">
+        <routeDistribution>
+            <route id="EB_right" edges="Node1_2_EB Node2_5_SB" probability="0.33"/>
+            <route id="EB_straight" edges="Node1_2_EB Node2_3_EB" probability="0.34"/>
+            <route id="EB_left" edges="Node1_2_EB Node2_7_NB" probability="0.33"/>
+        </routeDistribution>
+    </flow>
+
+    <!-- Westbound (Node2_3_WB) -->
+    <flow id="WB" type="car" begin="0" end="3600" probability="0.2" departLane="random">
+        <routeDistribution>
+            <route id="WB_right" edges="Node2_3_WB Node2_7_NB" probability="0.33"/>
+            <route id="WB_straight" edges="Node2_3_WB Node1_2_WB" probability="0.34"/>
+            <route id="WB_left" edges="Node2_3_WB Node2_5_SB" probability="0.33"/>
+        </routeDistribution>
+    </flow>
+
+    <!-- Northbound (Node2_5_NB) -->
+    <flow id="NB" type="car" begin="0" end="3600" probability="0.2" departLane="random">
+        <routeDistribution>
+            <route id="NB_right" edges="Node2_5_NB Node2_3_EB" probability="0.33"/>
+            <route id="NB_straight" edges="Node2_5_NB Node2_7_NB" probability="0.34"/>
+            <route id="NB_left" edges="Node2_5_NB Node1_2_WB" probability="0.33"/>
+        </routeDistribution>
+    </flow>
+
+    <!-- Southbound (Node2_7_SB) -->
+    <flow id="SB" type="car" begin="0" end="3600" probability="0.2" departLane="random">
+        <routeDistribution>
+            <route id="SB_right" edges="Node2_7_SB Node1_2_WB" probability="0.33"/>
+            <route id="SB_straight" edges="Node2_7_SB Node2_5_SB" probability="0.34"/>
+            <route id="SB_left" edges="Node2_7_SB Node2_3_EB" probability="0.33"/>
+        </routeDistribution>
+    </flow>
+
+</routes>

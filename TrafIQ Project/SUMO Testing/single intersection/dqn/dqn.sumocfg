@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DQN Traffic Signal Control Config -->
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="dqn.net.xml"/>
+        <route-files value="dqn.rou.xml"/>
+        <additional-files value="dqn.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="900"/>   <!-- Max 15 mins per episode -->
+        <step-length value="1.0"/>
+    </time>
+
+    <report>
+        <verbose value="false"/>
+        <no-step-log value="true"/>   <!-- no step-by-step logging -->
+        <no-warnings value="true"/>   <!-- disable warnings -->
+    </report>
+
+    <output>
+        <tripinfo-output value="tripinfo.xml"/>
+        <summary value="summary.xml"/>
+    </output>
+
+</sumoConfiguration>
