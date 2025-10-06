@@ -46,15 +46,15 @@ nav:
   - About: about.md
   - Learning Phase: learning.md
   - Mini Projects:
-    - Frozen Lake: miniproj\frozenlake.md
-    - Taxi: miniproj\taxi.md
-    - Rule based SUMO: miniproj\rulebased_sumo.md
+    - Frozen Lake: miniproj/frozenlake.md
+    - Taxi: miniproj/taxi.md
+    - Rule based SUMO: miniproj/rulebased_sumo.md
   - Single Intersection: 
-    - Q Learning: single\qlearning.md
-    - DQN: single\dqn.md
-    - Rule based SUMO: single\ppo.md
-    - Genetic Algo: single\gen.md
+    - Q Learning: single/qlearning.md
+    - DQN: single/dqn.md
+    - Rule based SUMO: single/ppo.md
+    - Genetic Algo: single/gen.md
   - Multiple Intersection: 
-    - MAPPO Cooperative: multi\mappo_cop.md
-    - MAPPO Independent: multi\mappo_ind.md
+    - MAPPO Cooperative: multi/mappo_cop.md
+    - MAPPO Independent: multi/mappo_ind.md
   - OpenCV: cv.md
