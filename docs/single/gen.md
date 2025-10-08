@@ -10,6 +10,8 @@ A **Genetic Algorithm (GA)** is an **evolutionary optimization technique** inspi
 It is useful when the search space is large and complex — where traditional methods (like brute-force or gradient-based optimization) are not feasible.
 
 ---
+![Genetic Algo Flowchart](image.png)
+---
 
 ### Genetic Algorithm Steps
 
