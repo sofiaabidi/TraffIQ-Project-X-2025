@@ -1,128 +1,41 @@
-# 🚦TLS Optimization using Genetic Algorithm
-
+# 🚦 TLS Optimization using Genetic Algorithm and SUMO
+ 
 The optimization minimizes the **average vehicle waiting time** and **queue length**, while maximizing **throughput**.
 
+---
 
 ## What is a Genetic Algorithm (GA)?
 
-A **Genetic Algorithm** is an optimization method inspired by **natural evolution**.  
-It works by evolving a population of possible solutions over several generations to find the best one.  
-
-### GA Core Steps:
-1. **Initialization**–Generate a random population of solutions.
-2. **Evaluation**–Measure fitness (performance) of each solution.
-3. **Selection**–Choose the best-performing individuals.
-4. **Crossover**–Combine parts of two solutions to create offspring.
-5. **Mutation**–Randomly alter some parts to maintain diversity.
-6. **Iteration**–Repeat until reaching a desired number of generations or convergence.
+A **Genetic Algorithm (GA)** is an **evolutionary optimization technique** inspired by the process of **natural selection** in biology.  
+It is useful when the search space is large and complex — where traditional methods (like brute-force or gradient-based optimization) are not feasible.
 
 ---
 
-## Project Files
+### Genetic Algorithm Steps
 
-| File | Description |
-|------|--------------|
-| `gen.net.xml` | Road network for the intersection |
-| `gen.add.xml` | Additional network elements (e.g., detectors) |
-| `gen.rou.xml` | Vehicle route definitions |
-| `gen.py` | Main optimization script |
-
----
-
-## Algorithm Summary
-
-### Parameters
-```python
-POP_SIZE = 8              # Number of solutions per generation
-N_GENERATIONS = 10        # Number of generations
-MUTATION_RATE = 0.2       # Probability of mutation
-CROSSOVER_RATE = 0.7      # Probability of crossover
-GREEN_MIN, GREEN_MAX = 10, 60
-YELLOW_MIN, YELLOW_MAX = 2, 5
-SIM_STEPS = 2000          # Number of simulation steps per run
-```
-
-### Fitness Function
-The **fitness** evaluates how effective a given signal plan is:
-
-```python
-fitness = avg_wait + 0.5 * queue_penalty - 0.2 * throughput_bonus
-```
-
-- **avg_wait:** average vehicle waiting time (lower is better)  
-- **queue_penalty:** total halting vehicles over time  
-- **throughput_bonus:** number of vehicles that successfully left the network  
-
-The **goal** is to **minimize** the fitness value.
+| Step | Process | Description |
+|------|----------|-------------|
+| **1. Initialization** | Create a random population | Each individual (chromosome) represents a possible traffic signal plan — e.g., `[30, 3, 45, 4]` for green/yellow durations. |
+| **2. Fitness Evaluation** | Evaluate each solution | Simulate each plan in SUMO and calculate its **fitness** (based on wait time, queue length, throughput). |
+| **3. Selection** | Choose the best solutions | Better-performing solutions have higher chances of being selected for reproduction. |
+| **4. Crossover (Recombination)** | Combine two solutions | Mix timing values from two parents to create new offspring with potentially better performance. |
+| **5. Mutation** | Randomly change some values | Introduce randomness (e.g., slightly changing a green duration) to maintain diversity and explore new possibilities. |
+| **6. Replacement** | Form a new population | Keep the best individuals (elitism) and replace the worst ones with new ones. |
+| **7. Termination** | Stop after certain generations | End when improvement slows or a maximum generation count is reached. |
 
 ---
 
-## Code Structure
+### 🚦 Why Use a Genetic Algorithm for Traffic Optimization?
 
-### Run SUMO Simulation
-```python
-def run_simulation(phase_durations):
-    # Launch SUMO with the specified network and route files
-    traci.start([...])
-    # Modify traffic light program phases
-    # Run the simulation for SIM_STEPS and record stats
-    ...
-    traci.close()
-    return fitness
-```
+| Challenge | Why GA Helps |
+|------------|--------------|
+| **Dynamic and nonlinear environment** | Traffic flow depends on multiple interacting factors (routes, timings, vehicle arrivals). GA can search through complex spaces without needing explicit formulas. |
+| **No single best timing plan** | GA can adaptively find near-optimal signal timings even as traffic conditions change. |
+| **Multi-objective optimization** | GA can balance competing objectives (e.g., reducing waiting time, minimizing queue length, maximizing throughput). |
 
-### Initialize Population
-```python
-def init_population(num_phases, phase_types):
-    # Create random green/yellow durations
-    return [[random.randint(GREEN_MIN, GREEN_MAX) if t == "green"
-             else random.randint(YELLOW_MIN, YELLOW_MAX) for t in phase_types]
-            for _ in range(POP_SIZE)]
-```
+> **In short:** GA mimics natural evolution to continuously improve traffic light timings — leading to smoother traffic flow and reduced congestion.
 
-### Crossover & Mutation
-```python
-def crossover(p1, p2):
-    if random.random() < CROSSOVER_RATE:
-        point = random.randint(1, len(p1) - 1)
-        return p1[:point] + p2[point:], p2[:point] + p1[point:]
-    return p1[:], p2[:]
-
-def mutate(ind, phase_types):
-    for i, t in enumerate(phase_types):
-        if random.random() < MUTATION_RATE:
-            ind[i] = random.randint(GREEN_MIN, GREEN_MAX) if t == "green" else random.randint(YELLOW_MIN, YELLOW_MAX)
-    return ind
-```
-
-### Main GA Loop
-```python
-population = init_population(len(phases), phase_types)
-best_solution, best_score = None, float("inf")
-
-for gen in range(N_GENERATIONS):
-    fitness = [run_simulation(ind) for ind in population]
-    # Select, crossover, and mutate
-    ...
-    print(f"Generation {gen+1}: Best Fitness = {best_score:.2f}")
-```
-
-### Visualization
-At the end of optimization, results are visualized using Matplotlib:
-```python
-plt.plot(range(1, N_GENERATIONS+1), best_scores, marker='o')
-plt.xlabel("Generation")
-plt.ylabel("Best Fitness")
-plt.title("GA Optimization Progress")
-plt.grid(True)
-plt.show()
-```
-
-## Dependencies
-Install required modules:
-```bash
-pip install traci matplotlib
-```
-Make sure SUMO is installed and available in your system path.
+---
+![Genetic Algorithm Flowchart](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mdpi.com%2F2073-8994%2F12%2F11%2F1758&psig=AOvVaw0da7i8ixE_jYHFnj5x0u8f&ust=1760008347538000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJimmZK9lJADFQAAAAAdAAAAABAE)
 ---
 
