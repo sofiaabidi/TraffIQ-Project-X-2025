@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-10-08 16:16:31 by Eclipse SUMO netedit Version 1.23.1
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="f_0" begin="0.00" from="-E15" to="-E31" via="E18 E21" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_1" begin="0.00" from="-E15" to="E30" via="E17 E29" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_10" begin="0.00" from="-E23" to="E17" via="-E16" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_11" begin="0.00" from="-E26" to="E15" via="-E20 -E18" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_12" begin="0.00" from="-E19" to="-E34" via="E20 E25" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_13" begin="0.00" from="-E19" to="E26" via="E20" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_14" begin="0.00" from="-E26" to="E22" via="-E24" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_15" begin="0.00" from="-E21" to="E24" via="E20" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_16" begin="0.00" from="E24" to="E24" end="3600.00" vehsPerHour="90"/>
+    <flow id="f_18" begin="0.00" from="-E23" to="-E37" via="E22" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_19" begin="0.00" from="-E23" to="E26" via="E24" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_2" begin="0.00" from="-E15" to="E36" via="E16 E23" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_3" begin="0.00" from="-E22" to="E33" via="E24 E26" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_4" begin="0.00" from="-E17" to="E22" via="E16" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_5" begin="0.00" from="-E17" to="E15" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_6" begin="0.00" from="-E17" to="E19" via="E18" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_7" begin="0.00" from="-E15" to="E22" via="E18 E20 -E24" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_8" begin="0.00" from="-E22" to="E25" via="E24" end="3600.00" vehsPerHour="180"/>
+    <flow id="f_9" begin="0.00" from="-E26" to="E25" end="3600.00" vehsPerHour="90"/>
+</routes>
