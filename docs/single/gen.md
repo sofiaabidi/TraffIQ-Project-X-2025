@@ -27,7 +27,7 @@ It is useful when the search space is large and complex — where traditional me
 
 ---
 
-### 🚦 Why Use a Genetic Algorithm for Traffic Optimization?
+### Why Use a Genetic Algorithm for Traffic Optimization?
 
 | Challenge | Why GA Helps |
 |------------|--------------|
