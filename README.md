@@ -165,6 +165,9 @@ A simple tabular RL algorithm for discrete environments. Updates Q-values based 
 ```python
 Q(s,a) = Q(s,a) + α[r + γ·max(Q(s',a')) - Q(s,a)]
 ```
+<p align="center">
+  <img src="results/single_intersection/q_learning/q_learning_queue_length.jpeg" height="250"/>
+</p>
 
 ### DQN (Deep Q-Networks)
 Uses neural networks to approximate Q-values with prioritized experience replay for improved sample efficiency.
@@ -174,6 +177,10 @@ Uses neural networks to approximate Q-values with prioritized experience replay 
 - Target network for stability
 - Prioritized sampling (PER)
 - Huber loss for robustness
+
+<p align="center">
+  <img src="results/single_intersection/dqn/dqn_results.jpeg" height="250"/>
+</p>
 
 ### PPO (Proximal Policy Optimization)
 A policy gradient method that ensures stable learning by clipping policy updates.
