@@ -5,7 +5,7 @@
 **TrafIQ** is an intelligent traffic management system that uses **Deep Reinforcement Learning (DRL)** to optimize traffic signal timings in real-time. By integrating **SUMO (Simulation of Urban Mobility)**, **computer vision**, and advanced RL algorithms, TrafIQ achieves significant improvements in traffic flow, reduced waiting times, and lower vehicular emissions.
 
 ### The Problem
-Traffic congestion in urban areas is a critical challenge:
+Traffic congestion in urban areas is a major challenge:
 - **Fixed-timing traffic signals** cannot adapt to dynamic traffic patterns
 - **Antiquated systems** waste fuel and increase emissions
 - **Manual optimization** is slow and ineffective
