@@ -204,6 +204,21 @@ A policy gradient method that ensures stable learning by clipping policy updates
 Extends PPO to multi-agent scenarios with either independent or centralized training approaches.
 - **Independent PPO:** Each agent learns independently
 - **Cooperative MAPPO:** Centralized critic with independent actors
+<figure align="center">
+  <img src="results/visualizations/i.png" height="250"/>
+  <figcaption style="font-size: 14px;">
+    <b>Independent PPO Performance</b> 
+  </figcaption>
+</figure>
+
+<br>
+
+<figure align="center">
+  <img src="results/visualizations/c.png" height="250"/>
+  <figcaption style="font-size: 14px;">
+    <b>Cooperative PPO Performance</b>
+  </figcaption>
+</figure>
 
 ### Genetic Algorithm
 Evolutionary approach inspired by natural selection for finding near-optimal signal timings.
