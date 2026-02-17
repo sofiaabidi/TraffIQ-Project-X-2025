@@ -18,6 +18,10 @@ TrafIQ leverages **Reinforcement Learning** to enable traffic signals that learn
 
 ## Key Features
 
+<p align="center">
+  <img src="results/visualizations/image.png" height="250"/>
+</p>
+
 ###  Multiple RL Algorithms
 - **Q-Learning**: Simple, discrete state-action learning
 - **DQN (Deep Q-Networks)**: Deep learning for continuous state spaces
