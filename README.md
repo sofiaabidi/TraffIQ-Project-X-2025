@@ -181,9 +181,9 @@ A policy gradient method that ensures stable learning by clipping policy updates
 - Multiple epoch updates
 
 <p align="center">
-  <img src="results/single_intersection/ppo/queue_length.png" height="250"/>
-  <img src="results/single_intersection/ppo/waiting_time.png" height="250"/>
-  <img src="results/single_intersection/ppo/rewards_per_ep.png" height="250"/>
+  <img src="results/single_intersection/ppo/queue_length.png?v=2" height="250"/>
+  <img src="results/single_intersection/ppo/waiting_time.png?v=2" height="250"/>
+  <img src="results/single_intersection/ppo/rewards_per_ep.png?v=2" height="250"/>
 </p>
 
 
