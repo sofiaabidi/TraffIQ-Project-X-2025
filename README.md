@@ -5,7 +5,7 @@
 **TrafIQ** is an intelligent traffic management system that uses **Deep Reinforcement Learning (DRL)** to optimize traffic signal timings in real-time. By integrating **SUMO (Simulation of Urban Mobility)**, **computer vision**, and advanced RL algorithms, TrafIQ achieves significant improvements in traffic flow, reduced waiting times, and lower vehicular emissions.
 
 ### The Problem
-Traffic congestion in urban areas is a critical challenge:
+Traffic congestion in urban areas is a major challenge:
 - **Fixed-timing traffic signals** cannot adapt to dynamic traffic patterns
 - **Antiquated systems** waste fuel and increase emissions
 - **Manual optimization** is slow and ineffective
@@ -181,9 +181,9 @@ A policy gradient method that ensures stable learning by clipping policy updates
 - Multiple epoch updates
 
 <p align="center">
-  <img src="results/single_intersection/ppo/queue_length.png" height="250"/>
-  <img src="results/single_intersection/ppo/waiting_time.png" height="250"/>
-  <img src="results/single_intersection/ppo/rewards_per_ep.png" height="250"/>
+  <img src="results/single_intersection/ppo/queue_length.png?v=2" height="250"/>
+  <img src="results/single_intersection/ppo/waiting_time.png?v=2" height="250"/>
+  <img src="results/single_intersection/ppo/rewards_per_ep.png?v=2" height="250"/>
 </p>
 
 
@@ -197,6 +197,11 @@ Extends PPO to multi-agent scenarios with either independent or centralized trai
 ### Genetic Algorithm
 Evolutionary approach inspired by natural selection for finding near-optimal signal timings.
 **Best for:** Black-box optimization, parameter tuning
+
+<p align="center">
+  <img src="results/single_intersection/genetic_algo/ga_optimization.jpeg" height="250"/>
+</p>
+
 
 ---
 
@@ -252,18 +257,19 @@ Tracks vehicles crossing a virtual line in real traffic video footage.
 
 ## Documentation
 
-Full documentation is available on our [project wiki](https://github.com/your-username/TrafIQ/wiki):
+Full documentation is available on our [project documentation mkdocs](https://sofiaabidi.github.io/TraffIQ-Project-X-2025/):
 
 
 
 ## Project Contributors
 
-- **Ojas Alai** 
-- **Sofia Abidi** 
+- **Ojas Alai** — [@ojasalai27](https://github.com/ojasalai27)
+- **Sofia Abidi** — [@sofiaabidi](https://github.com/sofiaabidi)
 
 ### Mentors
-- **Yashvi Mehta** 
-- **Mahi Palimkar** 
+- **Yashvi Mehta**
+- **Mahi Palimkar**
+
 
 **Hosted by:** Project X, VJTI's exclusive CoC club
 
