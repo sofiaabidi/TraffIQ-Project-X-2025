@@ -180,6 +180,14 @@ A policy gradient method that ensures stable learning by clipping policy updates
 - Entropy regularization
 - Multiple epoch updates
 
+## 📊 Training Results
+
+## 📊 Training Results
+
+<p align="center"><img src="results/single_intersection/ppo/queue_length.png" width="31%"/><img src="results/single_intersection/ppo/waiting_time.png" width="31%"/><img src="results/single_intersection/ppo/rewards_per_ep.png" width="31%"/></p>
+
+
+
 ### MAPPO (Multi-Agent PPO)
 Extends PPO to multi-agent scenarios with either independent or centralized training approaches.
 **Independent PPO:** Each agent learns independently
