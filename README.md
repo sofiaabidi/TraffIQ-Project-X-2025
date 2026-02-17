@@ -198,6 +198,11 @@ Extends PPO to multi-agent scenarios with either independent or centralized trai
 Evolutionary approach inspired by natural selection for finding near-optimal signal timings.
 **Best for:** Black-box optimization, parameter tuning
 
+<p align="center">
+  <img src="results/single_intersection/genetic_algo/ga_optimization.jpeg" height="250"/>
+</p>
+
+
 ---
 
 ## Reward Structure
