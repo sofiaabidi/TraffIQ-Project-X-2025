@@ -18,6 +18,10 @@ TrafIQ leverages **Reinforcement Learning** to enable traffic signals that learn
 
 ## Key Features
 
+<p align="center">
+  <img src="results/visualizations/image.png" height="250"/>
+</p>
+
 ###  Multiple RL Algorithms
 - **Q-Learning**: Simple, discrete state-action learning
 - **DQN (Deep Q-Networks)**: Deep learning for continuous state spaces
@@ -161,6 +165,9 @@ A simple tabular RL algorithm for discrete environments. Updates Q-values based 
 ```python
 Q(s,a) = Q(s,a) + α[r + γ·max(Q(s',a')) - Q(s,a)]
 ```
+<p align="center">
+  <img src="results/single_intersection/q_learning/q_learning_queue_length.jpeg" height="250"/>
+</p>
 
 ### DQN (Deep Q-Networks)
 Uses neural networks to approximate Q-values with prioritized experience replay for improved sample efficiency.
@@ -170,6 +177,10 @@ Uses neural networks to approximate Q-values with prioritized experience replay 
 - Target network for stability
 - Prioritized sampling (PER)
 - Huber loss for robustness
+
+<p align="center">
+  <img src="results/single_intersection/dqn/dqn_results.jpeg" height="250"/>
+</p>
 
 ### PPO (Proximal Policy Optimization)
 A policy gradient method that ensures stable learning by clipping policy updates.
@@ -191,8 +202,8 @@ A policy gradient method that ensures stable learning by clipping policy updates
 
 ### MAPPO (Multi-Agent PPO)
 Extends PPO to multi-agent scenarios with either independent or centralized training approaches.
-**Independent PPO:** Each agent learns independently
-**Cooperative MAPPO:** Centralized critic with independent actors
+- **Independent PPO:** Each agent learns independently
+- **Cooperative MAPPO:** Centralized critic with independent actors
 
 ### Genetic Algorithm
 Evolutionary approach inspired by natural selection for finding near-optimal signal timings.
@@ -243,10 +254,12 @@ Tracks vehicles crossing a virtual line in real traffic video footage.
 ## Training Results
 
 ### Typical Improvements
-- **Queue Length:** ↓ 40-50% reduction
-- **Waiting Time:** ↓ 35-45% reduction
-- **Throughput:** ↑ 20-30% increase
-- **Emissions:** ↓ 30-40% CO₂ reduction
+
+- **Q-Learning:** ~9% reduction in queue length  
+- **DQN:** ~14% reduction in queue length and ~25% reduction in waiting time  
+- **PPO:** ~25% reduction in queue length and ~55% reduction in waiting time  
+- **Independent PPO:** ~12.5% reduction in queue length and ~30% reduction in waiting time  
+- **Cooperative PPO:** ~19.5% reduction in queue length and ~24% reduction in waiting time  
 
 ### Learning Curves
 - **Raw performance** (noisy but shows true dynamics)
