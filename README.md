@@ -257,18 +257,19 @@ Tracks vehicles crossing a virtual line in real traffic video footage.
 
 ## Documentation
 
-Full documentation is available on our [project wiki](https://github.com/your-username/TrafIQ/wiki):
+Full documentation is available on our [project documentation mkdocs](https://sofiaabidi.github.io/TraffIQ-Project-X-2025/):
 
 
 
 ## Project Contributors
 
-- **Ojas Alai** 
-- **Sofia Abidi** 
+- **Ojas Alai** — [@ojasalai27](https://github.com/ojasalai27)
+- **Sofia Abidi** — [@sofiaabidi](https://github.com/sofiaabidi)
 
 ### Mentors
-- **Yashvi Mehta** 
-- **Mahi Palimkar** 
+- **Yashvi Mehta**
+- **Mahi Palimkar**
+
 
 **Hosted by:** Project X, VJTI's exclusive CoC club
 
